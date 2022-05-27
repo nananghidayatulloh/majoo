@@ -140,15 +140,7 @@ $query = $this->input->get('search_query');
                     <div class="dropdown-header noti-title">
                       <h6 class="text-overflow m-0">Welcome!</h6>
                     </div>
-                    <a href="<?php echo site_url('admin/settings/profile'); ?>" class="dropdown-item">
-                      <i class="ni ni-single-02"></i>
-                      <span>Profil</span>
-                    </a>
-                    <a href="<?php echo site_url('admin/settings'); ?>" class="dropdown-item">
-                      <i class="ni ni-settings-gear-65"></i>
-                      <span>Pengaturan</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
+                    
                     <a href="<?php echo site_url('auth/logout'); ?>" class="dropdown-item">
                       <i class="ni ni-user-run"></i>
                       <span>Logout</span>
