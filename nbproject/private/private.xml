@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/laragon/www/majoo/application/modules/admin/views/products/view.php</file>
-            <file>file:/E:/laragon/www/majoo/application/modules/admin/models/Product_model.php</file>
-            <file>file:/E:/laragon/www/majoo/application/modules/admin/views/products/products.php</file>
-            <file>file:/E:/laragon/www/majoo/application/modules/admin/views/products/category.php</file>
-            <file>file:/E:/laragon/www/majoo/application/modules/admin/controllers/Products.php</file>
-            <file>file:/E:/laragon/www/majoo/application/modules/admin/views/header.php</file>
+            <file>file:/E:/laragon/www/majoo/application/controllers/auth/Login.php</file>
+            <file>file:/E:/laragon/www/majoo/application/models/auth/Login_model.php</file>
+            <file>file:/E:/laragon/www/majoo/application/config/jwt.php</file>
+            <file>file:/E:/laragon/www/majoo/application/modules/api/controllers/Api.php</file>
+            <file>file:/E:/laragon/www/majoo/application/modules/api/models/Model_api.php</file>
         </group>
     </open-files>
 </project-private>

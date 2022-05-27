@@ -7,7 +7,7 @@ class Api extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('model_users', 'm_users'); 
+        $this->load->model('model_api', 'm_api'); 
         $this->load->helper('string');
         
     }
@@ -24,21 +24,21 @@ class Api extends CI_Controller {
 
     public function login()
 	{
-		$this->form_validation->set_rules('email', 'email', 'required|valid_email|max_length[256]');
+		$this->form_validation->set_rules('username', 'username', 'required|max_length[256]');
 		$this->form_validation->set_rules('password', 'password', 'required|min_length[8]|max_length[256]');
 		return Validation::validate($this, '', '', function($token, $output)
 		{
-			$email = $this->input->post('email');
+			$username = $this->input->post('username');
 			$password = $this->input->post('password');
-			$id = $this->m_users->login($email, $password);
+			$id = $this->m_api->login($username, $password);
 			if ($id != false) {
 				$token = array();
 				$token['id'] = $id;
 				$output['status'] = true;
-				$output['email'] = $email;
+				$output['username'] = $username;
 				$output['token'] = JWT::encode($token, $this->config->item('jwt_key'));
-                $ip = $this->input->ip_address();
-                $output['ip'] = $ip;
+                                $ip = $this->input->ip_address();
+                                $output['ip'] = $ip;
             }
 			else
 			{
@@ -60,7 +60,6 @@ class Api extends CI_Controller {
 				$output['status'] = true;
 				$output['nohp'] = $nohp;
 				$output['username'] = $username;
-				$output['token'] = JWT::encode($token, $this->config->item('jwt_key'));
                 $ip = $this->input->ip_address();
                 $output['ip'] = $ip;
                 
